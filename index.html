@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo Club of Kiribathgoda ELPIS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        maroon: '#800000',
+                        gold: '#FFD700',
+                        dark: '#121212',
+                        darkSurface: '#1E1E1E'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-dark text-gray-200">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <!-- Logo placeholder - replacing with text for now, could add actual logo image later -->
+                    <div class="w-10 h-10 rounded-full bg-maroon flex items-center justify-center border-2 border-gold shadow-[0_0_10px_rgba(255,215,0,0.5)]">
+                        <span class="font-bold text-gold text-xl outfit">L</span>
+                    </div>
+                    <span class="font-bold text-xl tracking-wider uppercase"><span class="text-white">Leo Club of</span> <span class="text-gold">Kiribathgoda ELPIS</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gold border-b-2 border-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="about.html" class="text-gray-300 hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">About Us</a>
+                        <a href="lions-leos.html" class="text-gray-300 hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Lions & Leos</a>
+                        <a href="projects.html" class="text-gray-300 hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="contact.html" class="bg-maroon hover:bg-red-800 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-[0_0_15px_rgba(128,0,0,0.5)] border border-maroon">Contact</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button onclick="toggleMenu()" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-darkSurface border-t border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gold block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="about.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="lions-leos.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Lions & Leos</a>
+                <a href="projects.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="contact.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/hero_bg_1777914965813.png" alt="Hero Background" class="w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-b from-dark/50 via-dark/80 to-dark"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-20">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight reveal">
+                Empowering Youth,<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-500">Serving Communities</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto font-light reveal delay-100">
+                Welcome to the Leo Club of Kiribathgoda ELPIS. We are a dynamic group of young leaders dedicated to making a positive impact.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 reveal delay-200">
+                <a href="projects.html" class="btn-primary px-8 py-4 rounded-full text-lg font-semibold uppercase tracking-wider">Our Projects</a>
+                <a href="about.html" class="btn-outline px-8 py-4 rounded-full text-lg font-semibold uppercase tracking-wider bg-transparent">Who We Are</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Snippet -->
+    <section class="py-24 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-4xl font-bold mb-6"><span class="text-maroon">Leadership.</span> <span class="text-gold">Experience.</span> <span class="text-white">Opportunity.</span></h2>
+                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                        The Leo Club of Kiribathgoda ELPIS is part of a global network of young people dedicated to community service and leadership development. Through our various initiatives, we strive to bring hope, support, and sustainable change to those who need it most.
+                    </p>
+                    <a href="about.html" class="text-gold hover:text-yellow-400 font-semibold flex items-center gap-2 group transition-all">
+                        Learn more about our journey 
+                        <i class="fas fa-arrow-right transform group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+                <div class="relative reveal">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-maroon to-transparent rounded-2xl transform translate-x-4 translate-y-4 opacity-50 blur-lg"></div>
+                    <img src="assets/community_service_1777915403390.png" alt="Community Service" class="relative rounded-2xl shadow-2xl border border-gray-800 object-cover h-[400px] w-full hover-scale">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Projects Snippet -->
+    <section class="py-24 bg-darkSurface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl font-bold text-white mb-4">Recent Highlights</h2>
+                <div class="h-1 w-24 bg-gold mx-auto rounded"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-dark rounded-xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal group hover:-translate-y-2 shadow-lg">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-maroon/20 group-hover:bg-transparent transition-all z-10"></div>
+                        <img src="assets/community_service_1777915403390.png" alt="Project 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-gold text-sm font-semibold mb-2">Community</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Tree Plantation Drive</h3>
+                        <p class="text-gray-400 text-sm mb-4">A successful initiative to plant over 500 trees in the local community to promote environmental sustainability.</p>
+                        <a href="projects.html" class="text-maroon hover:text-red-500 text-sm font-semibold">Read More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="bg-dark rounded-xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal delay-100 group hover:-translate-y-2 shadow-lg">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-maroon/20 group-hover:bg-transparent transition-all z-10"></div>
+                        <img src="assets/leo_lion_1777915028537.png" alt="Project 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-gold text-sm font-semibold mb-2">Health</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Blood Donation Camp</h3>
+                        <p class="text-gray-400 text-sm mb-4">Organized a massive blood donation camp at the Kiribathgoda hospital, gathering over 200 pints of blood.</p>
+                        <a href="projects.html" class="text-maroon hover:text-red-500 text-sm font-semibold">Read More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="bg-dark rounded-xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal delay-200 group hover:-translate-y-2 shadow-lg">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-maroon/20 group-hover:bg-transparent transition-all z-10"></div>
+                        <img src="assets/community_service_1777915403390.png" alt="Project 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-gold text-sm font-semibold mb-2">Education</div>
+                        <h3 class="text-xl font-bold text-white mb-3">School Supplies Donation</h3>
+                        <p class="text-gray-400 text-sm mb-4">Distributed school bags and stationary items to underprivileged children in rural schools.</p>
+                        <a href="projects.html" class="text-maroon hover:text-red-500 text-sm font-semibold">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 reveal">
+                <a href="projects.html" class="btn-outline px-6 py-3 rounded-full font-semibold inline-block">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-8 h-8 rounded-full bg-maroon flex items-center justify-center border border-gold">
+                            <span class="font-bold text-gold text-sm">L</span>
+                        </div>
+                        <span class="font-bold text-lg text-white uppercase">Leo Club of Kiribathgoda ELPIS</span>
+                    </div>
+                    <p class="text-gray-400 text-sm max-w-md">
+                        Empowering youth to serve communities. We are proud members of the international Leo Movement, striving to create a better world through leadership and compassion.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index.html" class="hover:text-gold transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-gold transition-colors">About Us</a></li>
+                        <li><a href="lions-leos.html" class="hover:text-gold transition-colors">Lions & Leos</a></li>
+                        <li><a href="projects.html" class="hover:text-gold transition-colors">Projects</a></li>
+                        <li><a href="contact.html" class="hover:text-gold transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-darkSurface flex items-center justify-center text-gray-400 hover:bg-maroon hover:text-white transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-darkSurface flex items-center justify-center text-gray-400 hover:bg-maroon hover:text-white transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-darkSurface flex items-center justify-center text-gray-400 hover:bg-maroon hover:text-white transition-all">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">© 2026 Leo Club of Kiribathgoda ELPIS. All rights reserved.</p>
+                <p class="text-gray-500 text-sm mt-2 md:mt-0">Designed with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

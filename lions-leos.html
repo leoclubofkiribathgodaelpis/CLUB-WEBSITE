@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lions & Leos | Leo Club of Kiribathgoda ELPIS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        maroon: '#800000',
+                        gold: '#FFD700',
+                        dark: '#121212',
+                        darkSurface: '#1E1E1E'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-dark text-gray-200">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass transition-all duration-300 bg-dark/90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-maroon flex items-center justify-center border-2 border-gold shadow-[0_0_10px_rgba(255,215,0,0.5)]">
+                        <span class="font-bold text-gold text-xl outfit">L</span>
+                    </div>
+                    <span class="font-bold text-xl tracking-wider uppercase"><span class="text-white">Leo Club of</span> <span class="text-gold">Kiribathgoda ELPIS</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gray-300 hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="about.html" class="text-gray-300 hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">About Us</a>
+                        <a href="lions-leos.html" class="text-gold border-b-2 border-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Lions & Leos</a>
+                        <a href="projects.html" class="text-gray-300 hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="contact.html" class="bg-maroon hover:bg-red-800 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-[0_0_15px_rgba(128,0,0,0.5)] border border-maroon">Contact</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button onclick="toggleMenu()" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-darkSurface border-t border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="about.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="lions-leos.html" class="text-gold block px-3 py-2 rounded-md text-base font-medium">Lions & Leos</a>
+                <a href="projects.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="contact.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-darkSurface border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+            <h1 class="text-5xl font-black text-white mb-4">Lions & <span class="text-gold">Leos</span></h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">Understanding the global movement behind our local actions.</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-20 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Lions International -->
+            <div class="flex flex-col md:flex-row gap-12 items-center mb-24 reveal">
+                <div class="md:w-1/2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(255,215,0,0.15)] border border-gray-800 p-2 glass">
+                        <img src="assets/leo_lion_1777915028537.png" alt="Lions International" class="rounded-xl w-full h-auto object-cover">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-white mb-6">Lions Clubs International</h2>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Lions Clubs International is the world's largest service club organization, with over 1.4 million members in more than 48,000 clubs worldwide. Founded in 1917, Lions are known for working to end preventable blindness, but also participate in a vast variety of other projects including environmental protection, disaster relief, and youth empowerment.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        "We Serve" is the simple, yet profound motto of the Lions. Our sponsoring club provides us with guidance, support, and the framework to make a real difference.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Leo Movement -->
+            <div class="flex flex-col md:flex-row-reverse gap-12 items-center reveal delay-100">
+                <div class="md:w-1/2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(128,0,0,0.3)] border border-gray-800 p-2 glass">
+                        <img src="assets/community_service_1777915403390.png" alt="Leo Movement" class="rounded-xl w-full h-auto object-cover">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-white mb-6">The Leo Movement</h2>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        The Leo Club objective is to provide the youth of the world with an opportunity for development and contribution, individually and collectively, as responsible members of the local, national and international community.
+                    </p>
+                    <ul class="space-y-4 mb-6">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-gold mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Leadership</strong>
+                                <span class="text-gray-400 text-sm">Leos develop skills as organizers, time makers and motivators of their peers.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-maroon mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Experience</strong>
+                                <span class="text-gray-400 text-sm">They learn how teamwork, cooperation and collaboration can bring exciting changes to their community.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-white mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Opportunity</strong>
+                                <span class="text-gray-400 text-sm">Leos form lifelong connections and recognize how their actions impact the world.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-8 h-8 rounded-full bg-maroon flex items-center justify-center border border-gold">
+                            <span class="font-bold text-gold text-sm">L</span>
+                        </div>
+                        <span class="font-bold text-lg text-white uppercase">Leo Club of Kiribathgoda ELPIS</span>
+                    </div>
+                    <p class="text-gray-400 text-sm max-w-md">
+                        Empowering youth to serve communities. We are proud members of the international Leo Movement, striving to create a better world through leadership and compassion.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index.html" class="hover:text-gold transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-gold transition-colors">About Us</a></li>
+                        <li><a href="lions-leos.html" class="hover:text-gold transition-colors">Lions & Leos</a></li>
+                        <li><a href="projects.html" class="hover:text-gold transition-colors">Projects</a></li>
+                        <li><a href="contact.html" class="hover:text-gold transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-darkSurface flex items-center justify-center text-gray-400 hover:bg-maroon hover:text-white transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-darkSurface flex items-center justify-center text-gray-400 hover:bg-maroon hover:text-white transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-darkSurface flex items-center justify-center text-gray-400 hover:bg-maroon hover:text-white transition-all">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">© 2026 Leo Club of Kiribathgoda ELPIS. All rights reserved.</p>
+                <p class="text-gray-500 text-sm mt-2 md:mt-0">Designed with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
