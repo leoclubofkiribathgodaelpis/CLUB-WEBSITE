@@ -98,7 +98,7 @@
                         <p class="text-gray-400 text-sm mb-4 line-clamp-3">An interactive online orientation programme designed to welcome and inspire new members, providing a clear understanding of the club's structure, goals, and service opportunities.</p>
                         <div class="flex items-center justify-between mt-6 pt-4 border-t border-gray-800">
                             <span class="text-xs text-gray-500"><i class="far fa-calendar-alt mr-1"></i> Sep 2025</span>
-                            <button class="text-maroon hover:text-red-500 text-sm font-semibold">View Details &rarr;</button>
+                            <button onclick="openProjectModal('club-orientation')" class="text-maroon hover:text-red-500 text-sm font-semibold">View Details &rarr;</button>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                         <p class="text-gray-400 text-sm mb-4 line-clamp-3">A massive tree plantation drive around the Kiribathgoda city limits aiming to increase the green cover and raise awareness about climate change.</p>
                         <div class="flex items-center justify-between mt-6 pt-4 border-t border-gray-800">
                             <span class="text-xs text-gray-500"><i class="far fa-calendar-alt mr-1"></i> Oct 2025</span>
-                            <button class="text-maroon hover:text-red-500 text-sm font-semibold">View Details &rarr;</button>
+                            <button onclick="openProjectModal('green-earth')" class="text-maroon hover:text-red-500 text-sm font-semibold">View Details &rarr;</button>
                         </div>
                     </div>
                 </div>
@@ -136,7 +136,7 @@
                         <p class="text-gray-400 text-sm mb-4 line-clamp-3">Our annual blood donation camp that successfully collected 250 pints of blood to support the National Blood Bank during crucial shortages.</p>
                         <div class="flex items-center justify-between mt-6 pt-4 border-t border-gray-800">
                             <span class="text-xs text-gray-500"><i class="far fa-calendar-alt mr-1"></i> Aug 2025</span>
-                            <button class="text-maroon hover:text-red-500 text-sm font-semibold">View Details &rarr;</button>
+                            <button onclick="openProjectModal('blood-camp')" class="text-maroon hover:text-red-500 text-sm font-semibold">View Details &rarr;</button>
                         </div>
                     </div>
                 </div>
@@ -155,7 +155,7 @@
                         <p class="text-gray-400 text-sm mb-4 line-clamp-3">Donating essential school supplies and conducting a motivational seminar for O/L students at a rural school in the district.</p>
                         <div class="flex items-center justify-between mt-6 pt-4 border-t border-gray-800">
                             <span class="text-xs text-gray-500"><i class="far fa-calendar-alt mr-1"></i> Jan 2025</span>
-                            <button class="text-maroon hover:text-red-500 text-sm font-semibold">View Details &rarr;</button>
+                            <button onclick="openProjectModal('nena-pahana')" class="text-maroon hover:text-red-500 text-sm font-semibold">View Details &rarr;</button>
                         </div>
                     </div>
                 </div>
@@ -243,6 +243,163 @@
             </div>
         </div>
     </footer>
+
+    <!-- Project Detail Modal -->
+    <div id="projectModal" class="fixed inset-0 z-[100] hidden overflow-y-auto">
+        <div class="fixed inset-0 bg-black/90 backdrop-blur-md transition-opacity" onclick="closeProjectModal()"></div>
+        
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-darkSurface w-full max-w-4xl rounded-3xl border border-gray-800 overflow-hidden relative shadow-2xl transform transition-all">
+                <!-- Close Button -->
+                <button onclick="closeProjectModal()" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-dark/50 border border-gray-700 flex items-center justify-center text-white hover:bg-maroon transition-colors z-50">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <!-- Project Image -->
+                    <div class="h-64 lg:h-full relative overflow-hidden">
+                        <img id="modalImage" src="" alt="" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkSurface to-transparent"></div>
+                    </div>
+
+                    <!-- Project Details -->
+                    <div class="p-8 lg:p-12 overflow-y-auto max-h-[80vh]">
+                        <div id="modalCategory" class="inline-block px-3 py-1 rounded-full text-xs font-bold text-gold border border-gold/30 mb-4 uppercase tracking-widest">Category</div>
+                        <h2 id="modalTitle" class="text-4xl font-black text-white mb-6">Project Title</h2>
+                        
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div class="bg-dark p-4 rounded-xl border border-gray-800">
+                                <p class="text-xs text-gray-500 uppercase mb-1">Date</p>
+                                <p id="modalDate" class="text-white font-bold">Sept 2025</p>
+                            </div>
+                            <div class="bg-dark p-4 rounded-xl border border-gray-800">
+                                <p class="text-xs text-gray-500 uppercase mb-1">Venue</p>
+                                <p id="modalVenue" class="text-white font-bold">Online</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center gap-3 text-gray-300">
+                                <i class="fas fa-user-tie text-maroon w-5 text-center"></i>
+                                <span><strong class="text-white">Chief Guest:</strong> <span id="modalGuest">-</span></span>
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-300">
+                                <i class="fas fa-user-edit text-maroon w-5 text-center"></i>
+                                <span><strong class="text-white">Chairman:</strong> <span id="modalChairman">-</span></span>
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-300">
+                                <i class="fas fa-pen-nib text-maroon w-5 text-center"></i>
+                                <span><strong class="text-white">Secretary:</strong> <span id="modalSecretary">-</span></span>
+                            </div>
+                        </div>
+
+                        <h4 class="text-lg font-bold text-white mb-3">Project Description</h4>
+                        <p id="modalDescription" class="text-gray-400 leading-relaxed mb-8">
+                            Full description here...
+                        </p>
+
+                        <div class="flex flex-wrap gap-3">
+                            <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-maroon/10 border border-maroon/20 text-maroon text-sm">
+                                <i class="fas fa-clock"></i> <span id="modalHours">0</span> Service Hours
+                            </div>
+                            <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gold/10 border border-gold/20 text-gold text-sm">
+                                <i class="fas fa-users"></i> <span id="modalParticipants">0</span> Leos Participated
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const projectsData = {
+            'club-orientation': {
+                title: 'Club Orientation Program',
+                category: 'Leadership',
+                image: 'assets/club_orientation_program.png',
+                date: 'Sept 21, 2025',
+                venue: 'Online Project',
+                guest: 'Leo Nimasha Jayakody FLM (District President)',
+                chairman: 'Leo Chameli Umayangana',
+                secretary: 'Leo Thejaka Dilwan',
+                description: 'This online orientation programme was designed to provide new Leos with a clear understanding of the club\'s structure, past projects, ongoing initiatives, and opportunities for service. The session included a presentation by senior members, sharing success stories, discussing roles and responsibilities, and a Q&A segment to address any queries. The program aimed to inspire engagement, strengthen teamwork, and foster a sense of belonging.',
+                hours: '2',
+                participants: '10'
+            },
+            'green-earth': {
+                title: 'Green Earth Initiative',
+                category: 'Environment',
+                image: 'assets/community_service_1777915403390.png',
+                date: 'Oct 2025',
+                venue: 'Kiribathgoda City',
+                guest: 'Local Environmental Officer',
+                chairman: 'Leo Pasindu Erantha',
+                secretary: 'Leo Sethmi Vindya',
+                description: 'A massive tree plantation drive around the Kiribathgoda city limits aiming to increase the green cover and raise awareness about climate change. More than 100 saplings were planted in public areas.',
+                hours: '5',
+                participants: '25'
+            },
+            'blood-camp': {
+                title: 'Lifeline Blood Camp',
+                category: 'Health',
+                image: 'assets/leo_lion_1777915028537.png',
+                date: 'Aug 2025',
+                venue: 'Kiribathgoda Base Hospital',
+                guest: 'Medical Officer in Charge',
+                chairman: 'Leo Thilina Thushan',
+                secretary: 'Leo Lasithma Lakdini',
+                description: 'Our annual blood donation camp that successfully collected 250 pints of blood to support the National Blood Bank during crucial shortages. This project serves hundreds of patients annually.',
+                hours: '8',
+                participants: '15'
+            },
+            'nena-pahana': {
+                title: 'Nena Pahana',
+                category: 'Education',
+                image: 'assets/community_service_1777915403390.png',
+                date: 'Jan 2025',
+                venue: 'Rural School - Gampaha',
+                guest: 'Zonal Education Director',
+                chairman: 'Leo Anjali',
+                secretary: 'Leo Hasini Nuwanthika',
+                description: 'Donating essential school supplies and conducting a motivational seminar for O/L students at a rural school in the district to support their education and mental well-being.',
+                hours: '6',
+                participants: '12'
+            }
+        };
+
+        function openProjectModal(id) {
+            const data = projectsData[id];
+            if (!data) return;
+
+            document.getElementById('modalTitle').textContent = data.title;
+            document.getElementById('modalCategory').textContent = data.category;
+            document.getElementById('modalImage').src = data.image;
+            document.getElementById('modalDate').textContent = data.date;
+            document.getElementById('modalVenue').textContent = data.venue;
+            document.getElementById('modalGuest').textContent = data.guest;
+            document.getElementById('modalChairman').textContent = data.chairman;
+            document.getElementById('modalSecretary').textContent = data.secretary;
+            document.getElementById('modalDescription').textContent = data.description;
+            document.getElementById('modalHours').textContent = data.hours;
+            document.getElementById('modalParticipants').textContent = data.participants;
+
+            const modal = document.getElementById('projectModal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById('projectModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Close on Escape key
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeProjectModal();
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
