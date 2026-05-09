@@ -138,9 +138,59 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project Item: Club Orientation Program -->
+                    <!-- Project Item: Installation Ceremony -->
                     <div
                         class="bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal group shadow-lg">
+                        <div class="h-56 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-maroon/20 group-hover:bg-transparent transition-all z-10">
+                            </div>
+                            <img src="assets/Projects/installation-25/WhatsApp Image 2026-05-09 at 3.19.33 PM.jpeg" alt="Installation Ceremony"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div
+                                class="absolute top-4 right-4 bg-dark/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gold z-20 border border-gold/30">
+                                Leadership
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-3">Installation Ceremony</h3>
+                            <p class="text-gray-400 text-sm mb-4 line-clamp-3">The official induction of the new board of directors for the Leoistic Year 2025/26, marking a new beginning of service.</p>
+                            <div class="flex items-center justify-between mt-6 pt-4 border-t border-gray-800">
+                                <span class="text-xs text-gray-500"><i class="far fa-calendar-alt mr-1"></i> July 2025</span>
+                                <button onclick="openProjectModal('installation-25')"
+                                    class="text-maroon hover:text-red-500 text-sm font-semibold">View Details
+                                    &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Item: 32nd Charter -->
+                    <div
+                        class="bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal delay-100 group shadow-lg">
+                        <div class="h-56 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-maroon/20 group-hover:bg-transparent transition-all z-10">
+                            </div>
+                            <img src="assets/32nd_Charter_celebration/img01.jpeg" alt="32nd Charter Celebration"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div
+                                class="absolute top-4 right-4 bg-dark/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gold z-20 border border-gold/30">
+                                Celebration
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-3">32nd Charter Celebration</h3>
+                            <p class="text-gray-400 text-sm mb-4 line-clamp-3">Celebrating over three decades of humanitarian service and club excellence in the Kiribathgoda community.</p>
+                            <div class="flex items-center justify-between mt-6 pt-4 border-t border-gray-800">
+                                <span class="text-xs text-gray-500"><i class="far fa-calendar-alt mr-1"></i> 2025</span>
+                                <button onclick="openProjectModal('charter-32')"
+                                    class="text-maroon hover:text-red-500 text-sm font-semibold">View Details
+                                    &rarr;</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Item: Club Orientation Program -->
+                    <div
+                        class="bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal delay-200 group shadow-lg">
                         <div class="h-56 overflow-hidden relative">
                             <div class="absolute inset-0 bg-maroon/20 group-hover:bg-transparent transition-all z-10">
                             </div>
@@ -429,6 +479,14 @@
                             Full description here...
                         </p>
 
+                        <!-- Additional Photos Gallery -->
+                        <div id="modalGalleryContainer" class="hidden">
+                            <h4 class="text-lg font-bold text-white mb-4">Additional Photos</h4>
+                            <div id="modalGallery" class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+                                <!-- Dynamic images here -->
+                            </div>
+                        </div>
+
                         <div class="flex flex-wrap gap-3">
                             <div
                                 class="flex items-center gap-2 px-4 py-2 rounded-lg bg-maroon/10 border border-maroon/20 text-maroon text-sm">
@@ -460,6 +518,62 @@
                 hours: '2',
                 participants: '10'
             },
+            'installation-25': {
+                title: 'Installation Ceremony 2025/26',
+                category: 'Leadership',
+                image: 'assets/Projects/installation-25/WhatsApp Image 2026-05-09 at 3.19.33 PM.jpeg',
+                date: 'July 2025',
+                venue: 'Kiribathgoda',
+                guest: 'Leo District Officers',
+                chairman: 'Leo Manal Sallay',
+                secretary: 'Leo Thejaka Dilwan',
+                description: 'The official Installation Ceremony of the Leo Club of Kiribathgoda ELPIS for the Leoistic Year 2025/26. This prestigious event marked the beginning of a new chapter of leadership and service, where the new board of directors was officially inducted and shared their vision for the upcoming year.',
+                hours: '5',
+                participants: '50+',
+                gallery: [
+                    'assets/Projects/installation-25/WhatsApp Image 2026-05-09 at 3.19.34 PM.jpeg',
+                    'assets/Projects/installation-25/WhatsApp Image 2026-05-09 at 3.19.39 PM.jpeg',
+                    'assets/Projects/installation-25/WhatsApp Image 2026-05-09 at 3.19.50 PM.jpeg',
+                    'assets/Projects/installation-25/WhatsApp Image 2026-05-09 at 3.20.14 PM.jpeg',
+                    'assets/Projects/installation-25/WhatsApp Image 2026-05-09 at 3.20.27 PM (2).jpeg',
+                    'assets/Projects/installation-25/WhatsApp Image 2026-05-09 at 3.20.37 PM.jpeg'
+                ]
+            },
+            'charter-32': {
+                title: '32nd Charter Celebration',
+                category: 'Celebration',
+                image: 'assets/32nd_Charter_celebration/img01.jpeg',
+                date: '2025',
+                venue: 'Kiribathgoda',
+                guest: 'Charter Members & Lions',
+                chairman: 'Leo Manal Sallay',
+                secretary: 'Leo Thejaka Dilwan',
+                description: 'Celebrating 32 years of service and excellence. The Charter Celebration brought together current members and pioneers of the club to honor our legacy and renew our commitment to the community.',
+                hours: '4',
+                participants: '40',
+                gallery: [
+                    'assets/32nd_Charter_celebration/img01.jpeg',
+                    'assets/32nd_Charter_celebration/img02.jpeg'
+                ]
+            },
+            'lions-installation': {
+                title: 'Lions Club Installation 2025',
+                category: 'Lionism',
+                image: 'assets/Lions_installation25/WhatsApp Image 2026-05-09 at 3.22.55 PM.jpeg',
+                date: '2025',
+                venue: 'Kiribathgoda',
+                guest: 'Lions District 306 D4 Officers',
+                chairman: 'Lion Pavani Perera',
+                secretary: 'Lion Officers',
+                description: 'The Installation Ceremony of the Lions Club of Kiribathgoda, our sponsoring club. Leos actively participated in this event, strengthening the bond between the Lions and Leo clubs and celebrating the shared spirit of service.',
+                hours: '6',
+                participants: '100+',
+                gallery: [
+                    'assets/Lions_installation25/WhatsApp Image 2026-05-09 at 3.23.11 PM.jpeg',
+                    'assets/Lions_installation25/WhatsApp Image 2026-05-09 at 3.23.12 PM.jpeg',
+                    'assets/Lions_installation25/WhatsApp Image 2026-05-09 at 3.23.13 PM (1).jpeg'
+                ]
+            },
             'gift-of-knowledge': {
                 title: '"GIFT OF KNOWLEDGE" Book Donation',
                 category: 'Education',
@@ -471,7 +585,15 @@
                 secretary: 'Leo Dunara Nimsiluni Vithanage',
                 description: 'The objective of this project was to support a school in need by helping establish a functional and resourceful library. The initiative aimed to promote literacy, encourage a love for reading, and enhance the educational experience of students. By collecting and donating books, we were able to directly address a critical gap in educational infrastructure and make a lasting impact on young learners in Horana.',
                 hours: '69',
-                participants: '17 (12 Leos, 5 Outsiders)'
+                participants: '17 (12 Leos, 5 Outsiders)',
+                gallery: [
+                    'assets/Projects/gift-of-knowledge/WhatsApp Image 2026-05-09 at 3.21.22 PM.jpeg',
+                    'assets/Projects/gift-of-knowledge/WhatsApp Image 2026-05-09 at 3.21.23 PM (1).jpeg',
+                    'assets/Projects/gift-of-knowledge/WhatsApp Image 2026-05-09 at 3.21.24 PM (1).jpeg',
+                    'assets/Projects/gift-of-knowledge/WhatsApp Image 2026-05-09 at 3.21.27 PM.jpeg',
+                    'assets/Projects/gift-of-knowledge/WhatsApp Image 2026-05-09 at 3.21.29 PM (1).jpeg',
+                    'assets/Projects/gift-of-knowledge/WhatsApp Image 2026-05-09 at 3.21.31 PM.jpeg'
+                ]
             },
             'aquaheart-sunrise': {
                 title: 'AQUAHEART SUNRISE – Flood Relief',
@@ -484,7 +606,15 @@
                 secretary: 'Leo Sethmi Paranavithana',
                 description: 'A swift and compassionate response to the floods of November 2025. In collaboration with the Lions Club of Kiribathgoda, our team delivered essential aid—including dry rations, bottled water, medicines, and hygiene products—to families in temporary shelters at Bollegala Maha Vidyalaya and through the Divisional Secretariat Office. This project brought hope and relief to over 300 beneficiaries during a time of crisis.',
                 hours: '24',
-                participants: '17 (8 Leos, 8 Lions, 1 Outsider)'
+                participants: '17 (8 Leos, 8 Lions, 1 Outsider)',
+                gallery: [
+                    'assets/Projects/aquaheart/WhatsApp Image 2026-05-09 at 3.26.20 PM.jpeg',
+                    'assets/Projects/aquaheart/WhatsApp Image 2026-05-09 at 3.26.28 PM (1).jpeg',
+                    'assets/Projects/aquaheart/WhatsApp Image 2026-05-09 at 3.26.29 PM.jpeg',
+                    'assets/Projects/aquaheart/WhatsApp Image 2026-05-09 at 3.26.30 PM.jpeg',
+                    'assets/Projects/aquaheart/WhatsApp Image 2026-05-09 at 3.26.43 PM.jpeg',
+                    'assets/Projects/aquaheart/WhatsApp Image 2026-05-09 at 3.26.46 PM.jpeg'
+                ]
             },
             'smile-packs': {
                 title: 'SMILE PACKS FOR LITTLE LEARNERS',
@@ -581,6 +711,26 @@
             document.getElementById('modalDescription').textContent = data.description;
             document.getElementById('modalHours').textContent = data.hours;
             document.getElementById('modalParticipants').textContent = data.participants;
+
+            // Handle Gallery
+            const galleryGrid = document.getElementById('modalGallery');
+            const galleryContainer = document.getElementById('modalGalleryContainer');
+            galleryGrid.innerHTML = '';
+            
+            if (data.gallery && data.gallery.length > 0) {
+                galleryContainer.classList.remove('hidden');
+                data.gallery.forEach(imgSrc => {
+                    const imgDiv = document.createElement('div');
+                    imgDiv.className = 'aspect-square rounded-lg overflow-hidden border border-gray-800 hover:border-maroon transition-all cursor-pointer';
+                    imgDiv.onclick = () => {
+                        document.getElementById('modalImage').src = imgSrc;
+                    };
+                    imgDiv.innerHTML = `<img src="${imgSrc}" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">`;
+                    galleryGrid.appendChild(imgDiv);
+                });
+            } else {
+                galleryContainer.classList.add('hidden');
+            }
 
             const modal = document.getElementById('projectModal');
             modal.classList.remove('hidden');
