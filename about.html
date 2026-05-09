@@ -48,6 +48,8 @@
                             & Leos</a>
                         <a href="projects.html"
                             class="text-gray-300 hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="gallery.html"
+                            class="text-gray-300 hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Gallery</a>
                         <a href="contact.html"
                             class="bg-maroon hover:bg-red-800 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-[0_0_15px_rgba(128,0,0,0.5)] border border-maroon">Contact</a>
                     </div>
@@ -71,6 +73,8 @@
                     Leos</a>
                 <a href="projects.html"
                     class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="gallery.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Gallery</a>
                 <a href="contact.html"
                     class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
             </div>
@@ -665,6 +669,127 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="py-24 bg-dark relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl font-black text-white mb-4">Frequently Asked <span class="text-gold">Questions</span></h2>
+                <div class="h-1 w-24 bg-maroon mx-auto rounded mb-6"></div>
+                <p class="text-gray-400">Everything you need to know about joining and being a part of our Leo family.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-darkSurface rounded-2xl border border-gray-800 overflow-hidden reveal shadow-lg">
+                    <button class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-800/50 transition-colors group" onclick="toggleFAQ(1)">
+                        <span class="text-lg font-bold text-white group-hover:text-gold transition-colors">What is the Leo Club?</span>
+                        <i id="faq-icon-1" class="fas fa-plus text-maroon transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-dark/30">
+                        <div class="px-8 pb-6 text-gray-400 leading-relaxed">
+                            Leo Clubs are youth organizations of Lions Clubs International. The name LEO stands for Leadership, Experience, and Opportunity. We provide young people with the opportunity to serve their communities and develop leadership skills.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-darkSurface rounded-2xl border border-gray-800 overflow-hidden reveal delay-100 shadow-lg">
+                    <button class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-800/50 transition-colors group" onclick="toggleFAQ(2)">
+                        <span class="text-lg font-bold text-white group-hover:text-gold transition-colors">Who can join the Leo Club of Kiribathgoda ELPIS?</span>
+                        <i id="faq-icon-2" class="fas fa-plus text-maroon transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-dark/30">
+                        <div class="px-8 pb-6 text-gray-400 leading-relaxed">
+                            Any young individual between the ages of 18 and 30 who is passionate about community service and leadership development can join us. We welcome individuals from all backgrounds who share our commitment to service.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-darkSurface rounded-2xl border border-gray-800 overflow-hidden reveal delay-200 shadow-lg">
+                    <button class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-800/50 transition-colors group" onclick="toggleFAQ(3)">
+                        <span class="text-lg font-bold text-white group-hover:text-gold transition-colors">Are there any membership fees?</span>
+                        <i id="faq-icon-3" class="fas fa-plus text-maroon transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-dark/30">
+                        <div class="px-8 pb-6 text-gray-400 leading-relaxed">
+                            Yes, there is a small annual membership fee which goes towards administrative costs and supporting our community service projects. This fee helps us maintain our affiliation with Leo District 306 D4 and Lions Clubs International.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-darkSurface rounded-2xl border border-gray-800 overflow-hidden reveal delay-300 shadow-lg">
+                    <button class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-800/50 transition-colors group" onclick="toggleFAQ(4)">
+                        <span class="text-lg font-bold text-white group-hover:text-gold transition-colors">How often does the club meet?</span>
+                        <i id="faq-icon-4" class="fas fa-plus text-maroon transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-dark/30">
+                        <div class="px-8 pb-6 text-gray-400 leading-relaxed">
+                            We typically have one general membership meeting per month, along with various project-related meetings and service activities. Our schedule is flexible to accommodate the academic and professional lives of our members.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-darkSurface rounded-2xl border border-gray-800 overflow-hidden reveal delay-400 shadow-lg">
+                    <button class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-800/50 transition-colors group" onclick="toggleFAQ(5)">
+                        <span class="text-lg font-bold text-white group-hover:text-gold transition-colors">What are the benefits of joining?</span>
+                        <i id="faq-icon-5" class="fas fa-plus text-maroon transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-dark/30">
+                        <div class="px-8 pb-6 text-gray-400 leading-relaxed">
+                            You gain valuable leadership experience, make lifelong friends, and have the opportunity to make a real difference in your community. Being a Leo also opens doors to international networking and personal growth opportunities.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleFAQ(id) {
+            const ans = document.getElementById(`faq-ans-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            
+            // Close other FAQs
+            for (let i = 1; i <= 5; i++) {
+                if (i !== id) {
+                    const otherAns = document.getElementById(`faq-ans-${i}`);
+                    const otherIcon = document.getElementById(`faq-icon-${i}`);
+                    if (otherAns) otherAns.style.maxHeight = null;
+                    if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                }
+            }
+
+            if (ans.style.maxHeight) {
+                ans.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                ans.style.maxHeight = ans.scrollHeight + "px";
+                icon.style.transform = 'rotate(45deg)';
+            }
+        }
+    </script>
+
+
+    <!-- Join Us CTA -->
+    <section class="py-24 bg-maroon relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('assets/Leo_Logo.png')] bg-center bg-no-repeat opacity-5 opacity-30 bg-fixed"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-black text-white mb-6 reveal">Ready to Make an <span class="text-gold underline">Impact?</span></h2>
+            <p class="text-xl text-white/80 max-w-2xl mx-auto mb-10 reveal delay-100">
+                Join the Leo Club of Kiribathgoda ELPIS and start your journey of leadership and service today. Together, we can change lives.
+            </p>
+            <div class="reveal delay-200">
+                <a href="contact.html" class="inline-block bg-white text-maroon hover:bg-gold hover:text-dark px-10 py-4 rounded-full font-black text-lg uppercase tracking-widest transition-all shadow-2xl hover:-translate-y-1">
+                    Apply for Membership
+                </a>
+            </div>
+            <p class="mt-8 text-white/60 text-sm reveal delay-300 italic">"Service is the rent we pay for the room we occupy on this earth."</p>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-black border-t border-gray-800 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -686,6 +811,7 @@
                         <li><a href="about.html" class="hover:text-gold transition-colors">About Us</a></li>
                         <li><a href="lions-leos.html" class="hover:text-gold transition-colors">Lions & Leos</a></li>
                         <li><a href="projects.html" class="hover:text-gold transition-colors">Projects</a></li>
+                        <li><a href="gallery.html" class="hover:text-gold transition-colors">Gallery</a></li>
                         <li><a href="contact.html" class="hover:text-gold transition-colors">Contact</a></li>
                     </ul>
                 </div>

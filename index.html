@@ -41,6 +41,7 @@
                         <a href="about.html" class="text-gray-300 hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">About Us</a>
                         <a href="lions-leos.html" class="text-gray-300 hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Lions & Leos</a>
                         <a href="projects.html" class="text-gray-300 hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="gallery.html" class="text-gray-300 hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Gallery</a>
                         <a href="contact.html" class="bg-maroon hover:bg-red-800 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-[0_0_15px_rgba(128,0,0,0.5)] border border-maroon">Contact</a>
                     </div>
                 </div>
@@ -58,6 +59,7 @@
                 <a href="about.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
                 <a href="lions-leos.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Lions & Leos</a>
                 <a href="projects.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="gallery.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Gallery</a>
                 <a href="contact.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
             </div>
         </div>
@@ -85,6 +87,82 @@
             </div>
         </div>
     </section>
+
+
+    <!-- Upcoming Events Countdown -->
+    <section class="py-12 bg-darkSurface border-y border-gray-800 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-maroon/5 to-gold/5 opacity-50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+                <div class="text-center lg:text-left reveal">
+                    <h2 class="text-2xl font-bold text-white mb-2">Next Big <span class="text-gold">Event</span></h2>
+                    <p class="text-gray-400 text-sm">Leoistic Year 2026/27 Installation Ceremony</p>
+                </div>
+                
+                <div class="flex gap-4 md:gap-8 reveal delay-100" id="countdown">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 md:w-20 md:h-20 bg-dark rounded-2xl flex items-center justify-center border border-gray-800 shadow-xl">
+                            <span class="text-2xl md:text-3xl font-black text-gold" id="days">00</span>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-gray-500 mt-2 uppercase tracking-widest">Days</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 md:w-20 md:h-20 bg-dark rounded-2xl flex items-center justify-center border border-gray-800 shadow-xl">
+                            <span class="text-2xl md:text-3xl font-black text-gold" id="hours">00</span>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-gray-500 mt-2 uppercase tracking-widest">Hours</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 md:w-20 md:h-20 bg-dark rounded-2xl flex items-center justify-center border border-gray-800 shadow-xl">
+                            <span class="text-2xl md:text-3xl font-black text-gold" id="minutes">00</span>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-gray-500 mt-2 uppercase tracking-widest">Mins</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 md:w-20 md:h-20 bg-dark rounded-2xl flex items-center justify-center border border-gray-800 shadow-xl">
+                            <span class="text-2xl md:text-3xl font-black text-maroon" id="seconds">00</span>
+                        </div>
+                        <span class="text-[10px] md:text-xs text-gray-500 mt-2 uppercase tracking-widest">Secs</span>
+                    </div>
+                </div>
+
+                <div class="reveal delay-200">
+                    <a href="contact.html" class="px-6 py-3 rounded-full bg-maroon/10 border border-maroon/30 text-maroon font-bold text-sm hover:bg-maroon hover:text-white transition-all">Join Event</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Countdown Timer Logic
+        const targetDate = new Date("July 1, 2026 09:00:00").getTime();
+
+        const countdownTimer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            const dEl = document.getElementById("days");
+            const hEl = document.getElementById("hours");
+            const mEl = document.getElementById("minutes");
+            const sEl = document.getElementById("seconds");
+
+            if(dEl) dEl.innerHTML = days < 10 ? "0" + days : days;
+            if(hEl) hEl.innerHTML = hours < 10 ? "0" + hours : hours;
+            if(mEl) mEl.innerHTML = minutes < 10 ? "0" + minutes : minutes;
+            if(sEl) sEl.innerHTML = seconds < 10 ? "0" + seconds : seconds;
+
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                const cEl = document.getElementById("countdown");
+                if(cEl) cEl.innerHTML = "<span class='text-gold font-bold'>The event has started!</span>";
+            }
+        }, 1000);
+    </script>
 
     <!-- Intro Snippet -->
     <section class="py-24 bg-dark">
@@ -164,6 +242,62 @@
         </div>
     </section>
 
+
+    <!-- Community Feedback (Testimonials) -->
+    <section class="py-24 bg-dark relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl font-black text-white mb-4">Community <span class="text-maroon">Feedback</span></h2>
+                <p class="text-gray-400">What others say about our commitment to service.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-darkSurface p-10 rounded-3xl border border-gray-800 relative reveal group hover:border-gold/30 transition-all">
+                    <i class="fas fa-quote-right absolute top-8 right-10 text-6xl text-gold/10"></i>
+                    <p class="text-gray-300 text-lg italic mb-8 leading-relaxed">
+                        "The Leo Club of Kiribathgoda ELPIS has been a beacon of hope in our community. Their recent flood relief efforts were life-saving and highly organized."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-maroon/20 flex items-center justify-center text-maroon font-bold">RL</div>
+                        <div>
+                            <p class="text-white font-bold">Ranjith Liyanage</p>
+                            <p class="text-gray-500 text-xs">Community Leader</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-darkSurface p-10 rounded-3xl border border-gray-800 relative reveal delay-100 group hover:border-maroon/30 transition-all">
+                    <i class="fas fa-quote-right absolute top-8 right-10 text-6xl text-maroon/10"></i>
+                    <p class="text-gray-300 text-lg italic mb-8 leading-relaxed">
+                        "Being a member of this club has transformed my leadership skills. It's more than a club; it's a family dedicated to empowering the youth."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold">DM</div>
+                        <div>
+                            <p class="text-white font-bold">Dinithi Madushika</p>
+                            <p class="text-gray-500 text-xs">Club Member</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Partners / Sponsors -->
+    <section class="py-20 bg-darkSurface border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <h3 class="text-xl font-bold text-gray-500 uppercase tracking-[0.3em]">Our Guiding Partners</h3>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-700 reveal">
+                <img src="assets/Leo_Logo.png" alt="Partner 1" class="h-16 md:h-20 object-contain hover:scale-110 transition-transform">
+                <img src="assets/Leo_Logo.png" alt="Partner 2" class="h-16 md:h-20 object-contain hover:scale-110 transition-transform brightness-150">
+                <div class="text-2xl font-black text-gray-700 tracking-tighter uppercase italic">Lions Club Kiribathgoda</div>
+                <div class="text-xl font-bold text-gray-700 uppercase">Leo District 306 D4</div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-black border-t border-gray-800 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -184,6 +318,7 @@
                         <li><a href="about.html" class="hover:text-gold transition-colors">About Us</a></li>
                         <li><a href="lions-leos.html" class="hover:text-gold transition-colors">Lions & Leos</a></li>
                         <li><a href="projects.html" class="hover:text-gold transition-colors">Projects</a></li>
+                        <li><a href="gallery.html" class="hover:text-gold transition-colors">Gallery</a></li>
                         <li><a href="contact.html" class="hover:text-gold transition-colors">Contact</a></li>
                     </ul>
                 </div>
