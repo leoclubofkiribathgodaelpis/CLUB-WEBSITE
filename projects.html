@@ -49,8 +49,6 @@
                             & Leos</a>
                         <a href="projects.html"
                             class="text-gold border-b-2 border-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
-                        <a href="gallery.html"
-                            class="text-gray-300 hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Gallery</a>
                         <a href="contact.html"
                             class="bg-maroon hover:bg-red-800 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-[0_0_15px_rgba(128,0,0,0.5)] border border-maroon">Contact</a>
                     </div>
@@ -74,8 +72,6 @@
                     class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Lions &
                     Leos</a>
                 <a href="projects.html" class="text-gold block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-                <a href="gallery.html"
-                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Gallery</a>
                 <a href="contact.html"
                     class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
             </div>
@@ -94,14 +90,18 @@
 
             <!-- Filter buttons -->
             <div class="flex flex-wrap justify-center gap-3 mt-10">
-                <button
-                    class="bg-maroon text-white px-5 py-2 rounded-full text-sm font-semibold border border-maroon">All</button>
-                <button
-                    class="bg-dark text-gray-300 hover:text-white px-5 py-2 rounded-full text-sm font-semibold border border-gray-700 hover:border-gold transition-colors">Health</button>
-                <button
-                    class="bg-dark text-gray-300 hover:text-white px-5 py-2 rounded-full text-sm font-semibold border border-gray-700 hover:border-gold transition-colors">Environment</button>
-                <button
-                    class="bg-dark text-gray-300 hover:text-white px-5 py-2 rounded-full text-sm font-semibold border border-gray-700 hover:border-gold transition-colors">Education</button>
+                <button onclick="filterProjects('all')"
+                    class="filter-btn active bg-maroon text-white px-5 py-2 rounded-full text-sm font-semibold border border-maroon">All</button>
+                <button onclick="filterProjects('Health')"
+                    class="filter-btn bg-dark text-gray-300 hover:text-white px-5 py-2 rounded-full text-sm font-semibold border border-gray-700 hover:border-gold transition-colors">Health</button>
+                <button onclick="filterProjects('Environment')"
+                    class="filter-btn bg-dark text-gray-300 hover:text-white px-5 py-2 rounded-full text-sm font-semibold border border-gray-700 hover:border-gold transition-colors">Environment</button>
+                <button onclick="filterProjects('Education')"
+                    class="filter-btn bg-dark text-gray-300 hover:text-white px-5 py-2 rounded-full text-sm font-semibold border border-gray-700 hover:border-gold transition-colors">Education</button>
+                <button onclick="filterProjects('Leadership')"
+                    class="filter-btn bg-dark text-gray-300 hover:text-white px-5 py-2 rounded-full text-sm font-semibold border border-gray-700 hover:border-gold transition-colors">Leadership</button>
+                <button onclick="filterProjects('Community Service')"
+                    class="filter-btn bg-dark text-gray-300 hover:text-white px-5 py-2 rounded-full text-sm font-semibold border border-gray-700 hover:border-gold transition-colors">Community Service</button>
             </div>
         </div>
     </section>
@@ -139,8 +139,8 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project Item: Installation Ceremony -->
-                    <div
-                        class="bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal group shadow-lg">
+                    <div data-category="Leadership"
+                        class="project-card bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal group shadow-lg">
                         <div class="h-56 overflow-hidden relative">
                             <div class="absolute inset-0 bg-maroon/20 group-hover:bg-transparent transition-all z-10">
                             </div>
@@ -164,8 +164,8 @@
                     </div>
 
                     <!-- Project Item: 32nd Charter -->
-                    <div
-                        class="bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal delay-100 group shadow-lg">
+                    <div data-category="Celebration"
+                        class="project-card bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal delay-100 group shadow-lg">
                         <div class="h-56 overflow-hidden relative">
                             <div class="absolute inset-0 bg-maroon/20 group-hover:bg-transparent transition-all z-10">
                             </div>
@@ -189,8 +189,8 @@
                     </div>
 
                     <!-- Project Item: Club Orientation Program -->
-                    <div
-                        class="bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal delay-200 group shadow-lg">
+                    <div data-category="Leadership"
+                        class="project-card bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal delay-200 group shadow-lg">
                         <div class="h-56 overflow-hidden relative">
                             <div class="absolute inset-0 bg-maroon/20 group-hover:bg-transparent transition-all z-10">
                             </div>
@@ -217,8 +217,8 @@
                     </div>
 
                     <!-- Project Item: Gift of Knowledge -->
-                    <div
-                        class="bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal delay-100 group shadow-lg">
+                    <div data-category="Education"
+                        class="project-card bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal delay-100 group shadow-lg">
                         <div class="h-56 overflow-hidden relative">
                             <div class="absolute inset-0 bg-maroon/20 group-hover:bg-transparent transition-all z-10">
                             </div>
@@ -245,8 +245,8 @@
                     </div>
 
                     <!-- Project Item: AquaHeart Sunrise -->
-                    <div
-                        class="bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal group shadow-lg">
+                    <div data-category="Community Service"
+                        class="project-card bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal group shadow-lg">
                         <div class="h-56 overflow-hidden relative">
                             <div class="absolute inset-0 bg-maroon/20 group-hover:bg-transparent transition-all z-10">
                             </div>
@@ -273,8 +273,8 @@
                     </div>
 
                     <!-- Project Item: Smile Packs for Little Learners -->
-                    <div
-                        class="bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal group shadow-lg">
+                    <div data-category="Education"
+                        class="project-card bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal group shadow-lg">
                         <div class="h-56 overflow-hidden relative">
                             <div class="absolute inset-0 bg-maroon/20 group-hover:bg-transparent transition-all z-10">
                             </div>
@@ -301,8 +301,8 @@
                     </div>
 
                     <!-- Project Item: Voice of Hope -->
-                    <div
-                        class="bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal group shadow-lg">
+                    <div data-category="Education"
+                        class="project-card bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal group shadow-lg">
                         <div class="h-56 overflow-hidden relative">
                             <div class="absolute inset-0 bg-maroon/20 group-hover:bg-transparent transition-all z-10">
                             </div>
@@ -329,8 +329,8 @@
                     </div>
 
                     <!-- Project Item: Square Card Project -->
-                    <div
-                        class="bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal delay-100 group shadow-lg">
+                    <div data-category="Fundraiser"
+                        class="project-card bg-darkSurface rounded-2xl overflow-hidden border border-gray-800 hover:border-maroon transition-all duration-300 reveal delay-100 group shadow-lg">
                         <div class="h-56 overflow-hidden relative">
                             <div class="absolute inset-0 bg-maroon/20 group-hover:bg-transparent transition-all z-10">
                             </div>
@@ -381,7 +381,6 @@
                         <li><a href="about.html" class="hover:text-gold transition-colors">About Us</a></li>
                         <li><a href="lions-leos.html" class="hover:text-gold transition-colors">Lions & Leos</a></li>
                         <li><a href="projects.html" class="hover:text-gold transition-colors">Projects</a></li>
-                        <li><a href="gallery.html" class="hover:text-gold transition-colors">Gallery</a></li>
                         <li><a href="contact.html" class="hover:text-gold transition-colors">Contact</a></li>
                     </ul>
                 </div>
@@ -479,13 +478,7 @@
                             Full description here...
                         </p>
 
-                        <!-- Additional Photos Gallery -->
-                        <div id="modalGalleryContainer" class="hidden">
-                            <h4 class="text-lg font-bold text-white mb-4">Additional Photos</h4>
-                            <div id="modalGallery" class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
-                                <!-- Dynamic images here -->
-                            </div>
-                        </div>
+
 
                         <div class="flex flex-wrap gap-3">
                             <div
@@ -743,25 +736,7 @@
             document.getElementById('modalHours').textContent = data.hours;
             document.getElementById('modalParticipants').textContent = data.participants;
 
-            // Handle Gallery
-            const galleryGrid = document.getElementById('modalGallery');
-            const galleryContainer = document.getElementById('modalGalleryContainer');
-            galleryGrid.innerHTML = '';
-            
-            if (data.gallery && data.gallery.length > 0) {
-                galleryContainer.classList.remove('hidden');
-                data.gallery.forEach(imgSrc => {
-                    const imgDiv = document.createElement('div');
-                    imgDiv.className = 'aspect-square rounded-lg overflow-hidden border border-gray-800 hover:border-maroon transition-all cursor-pointer';
-                    imgDiv.onclick = () => {
-                        document.getElementById('modalImage').src = imgSrc;
-                    };
-                    imgDiv.innerHTML = `<img src="${imgSrc}" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">`;
-                    galleryGrid.appendChild(imgDiv);
-                });
-            } else {
-                galleryContainer.classList.add('hidden');
-            }
+
 
             const modal = document.getElementById('projectModal');
             modal.classList.remove('hidden');

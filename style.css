@@ -48,17 +48,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Micro-animations */
 .hover-scale {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hover-scale:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 /* Reveal Animation */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.8s ease-out;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .reveal.active {
   opacity: 1;
@@ -67,29 +67,49 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Glassmorphism */
 .glass {
-  background: rgba(30, 30, 30, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Premium Card Style */
+.premium-card {
+  background: var(--color-dark-surface);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-card:hover {
+  border-color: rgba(255, 215, 0, 0.3);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
 }
 
 /* Button hover effects */
 .btn-primary {
   background: linear-gradient(135deg, var(--color-maroon), #a00000);
   color: white;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(128, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(128, 0, 0, 0.3);
 }
 .btn-primary:hover {
-  box-shadow: 0 6px 20px rgba(128, 0, 0, 0.6);
+  box-shadow: 0 8px 25px rgba(128, 0, 0, 0.5);
   transform: translateY(-2px);
 }
 .btn-outline {
   border: 2px solid var(--color-gold);
   color: var(--color-gold);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-outline:hover {
   background-color: var(--color-gold);
   color: var(--color-dark);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
 }
+
+/* Project Filtering Transitions */
+.project-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
