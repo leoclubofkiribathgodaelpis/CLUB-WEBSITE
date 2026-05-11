@@ -248,6 +248,12 @@
             <div class="text-center mb-16 reveal">
                 <h2 class="text-4xl font-black text-white mb-4">Community <span class="text-maroon">Feedback</span></h2>
                 <p class="text-gray-400">What others say about our commitment to service.</p>
+                
+                <!-- Success banner (shown on ?review_sent=true) -->
+                <div id="reviewSuccessBanner" class="hidden max-w-2xl mx-auto mt-6 bg-green-900/40 border border-green-600 text-green-300 rounded-lg px-5 py-4 text-sm flex items-center justify-center gap-3">
+                    <i class="fas fa-check-circle text-green-400 text-xl"></i>
+                    <span>ස්තූතියි! ඔබේ review එක successfully send වුණා. Thank you for your feedback! 🙏</span>
+                </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -278,6 +284,54 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="text-center mt-12 reveal">
+                <button onclick="openReviewModal()" class="btn-outline px-6 py-3 rounded-full font-semibold inline-flex items-center gap-2 text-gold border-gold hover:bg-gold hover:text-dark transition-all">
+                    <i class="fas fa-comment-dots"></i> Leave a Review
+                </button>
+            </div>
+        </div>
+
+        <!-- Review Modal -->
+        <div id="reviewModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+            <div class="bg-darkSurface border border-gray-800 p-8 rounded-3xl shadow-2xl max-w-lg w-full mx-4 transform scale-95 transition-transform duration-300 relative">
+                <button onclick="closeReviewModal()" class="absolute top-6 right-6 text-gray-500 hover:text-white transition-colors">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+                <h3 class="text-2xl font-bold text-white mb-2">Share Your Feedback</h3>
+                <p class="text-gray-400 text-sm mb-6">Your thoughts help us grow and serve the community better.</p>
+                
+                <form id="reviewForm" action="https://formsubmit.co/leoclub.kiribathgodaelpis@gmail.com" method="POST" class="space-y-5">
+                    <input type="hidden" name="_subject" value="New Community Review from Website">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://leoclubofkiribathgodaelpis.github.io/index.html?review_sent=true">
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-1">Your Name</label>
+                        <input type="text" name="Name" required class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-1">Your Role / Affiliation</label>
+                        <input type="text" name="Role" placeholder="e.g. Community Member, Donor, Member" required class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Rating</label>
+                        <div class="flex gap-2 text-2xl text-gray-600" id="starRating">
+                            <i class="fas fa-star cursor-pointer hover:text-gold transition-colors" data-rating="1"></i>
+                            <i class="fas fa-star cursor-pointer hover:text-gold transition-colors" data-rating="2"></i>
+                            <i class="fas fa-star cursor-pointer hover:text-gold transition-colors" data-rating="3"></i>
+                            <i class="fas fa-star cursor-pointer hover:text-gold transition-colors" data-rating="4"></i>
+                            <i class="fas fa-star cursor-pointer hover:text-gold transition-colors" data-rating="5"></i>
+                        </div>
+                        <input type="hidden" name="Rating" id="ratingInput" required value="5">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-1">Your Review</label>
+                        <textarea name="Review" required rows="4" class="w-full bg-dark border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold transition-colors resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-maroon hover:bg-red-800 text-white font-bold py-3 rounded-lg transition-all shadow-lg">Submit Review</button>
+                </form>
             </div>
         </div>
     </section>
